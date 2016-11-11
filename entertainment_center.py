@@ -1,41 +1,41 @@
 
 import video
-import movie
+import media
 import tv_show
 import fresh_tomatoes
 
-toy_story = movie.Movie("Toy Story",
+toy_story = media.Movie("Toy Story",
                         120,
                         "G",
                         "A story of a boy and his toys to life",
                         "http://images.ciatr.jp/2015/07/28182108/group-disney-announces-toy-story-4-is-happening-126226-640x432.jpeg",
                         "https://www.youtube.com/watch?v=Bj4gS1JQzjk")
-avater = movie.Movie("Avater",
-                        120,
+avater = media.Movie("Avater",
+                     120,
                         "G",
                         "A Marine on an alian planet",
                         "https://i.kinja-img.com/gawker-media/image/upload/rpmlcli7mfr4petrpqqc.jpg",
                         "https://www.youtube.com/watch?v=qYe-ncx3rVE")
-akira = movie.Movie("AKIRA",
-                        120,
+akira = media.Movie("AKIRA",
+                    120,
                         "G",
                         "Psychicer in Tokyo 2020",
                         "http://blog-imgs-19.fc2.com/c/i/n/cinemaxj/AKIRA.jpg",
                         "https://www.youtube.com/watch?v=LALsuMWv2ps")
-gundam = movie.Movie("GUNDAM",
-                        120,
+gundam = media.Movie("GUNDAM",
+                     120,
                         "G",
                         "War in the space with battle vehicles called GUNDAM",
                         "http://blogs.c.yimg.jp/res/blog-55-71/universalcentuly/folder/1698020/20/62936720/img_0",
                         "https://www.youtube.com/watch?v=wpQUmdw5U8Y")
-jurassic_park = movie.Movie("JURASSIC PARK",
-                        120,
+jurassic_park = media.Movie("JURASSIC PARK",
+                            120,
                         "G",
                         "Clone dinosaur assault people",
                         "http://ecx.images-amazon.com/images/I/71sXDxo9k7L._SL1106_.jpg",
                         "https://www.youtube.com/watch?v=lc0UehYemQA")
-life_is_beautiful = movie.Movie("Life is Beautiful",
-                        120,
+life_is_beautiful = media.Movie("Life is Beautiful",
+                                120,
                         "G",
                         "a father with great humanity in WW2",
                         "http://thumbnail.image.rakuten.co.jp/@0_mall/elcommun/cabinet/poster_cinema/img55479640.jpg?_ex=350x350&s=2&r=1",
