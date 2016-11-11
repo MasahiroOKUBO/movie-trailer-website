@@ -3,7 +3,6 @@ class Video():
     VALID_RATINGS = ["G", "PG", "PG-13", "R"]
 
     def __init__(self, title, duration, rating):
-        print("Parent Constructor Called")
         self.title = title
         self.duration = duration
         self.rating = rating

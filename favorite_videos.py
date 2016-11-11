@@ -141,7 +141,7 @@ main_page_content = '''
     <div class="container">
     <div class="video-type">My Favorite Movies !</div>
       {movie_tiles}
-    <div class="video-type">My Favorite TV Shows !</div>
+    <div class="video-type">My Favorite TV Seasons !</div>
       {tv_show_tiles}
     </div>
   </body>
@@ -186,7 +186,7 @@ tv_show_tile_table_content = '''
 '''
 
 def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
+    """The HTML content for movie tiles of the page"""
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -208,7 +208,7 @@ def create_movie_tiles_content(movies):
 
 
 def create_tv_season_tiles_content(tv_shows):
-    # The HTML content for this section of the page
+    """The HTML content for tv season tiles of the page"""
     content = ''
     for tv_show in tv_shows:
         # Extract the youtube ID from the url
@@ -229,12 +229,13 @@ def create_tv_season_tiles_content(tv_shows):
             tv_show_episode=len(tv_show.episode),
             tv_show_tv_station=tv_show.tv_station,
             tv_show_trailer_youtube_id=trailer_youtube_id,
-            tv_show_table=create_tv_show_tiles_table_content(tv_show)
+            tv_show_table=create_tv_season_tiles_table_content(tv_show)
         )
     return content
 
-def create_tv_show_tiles_table_content(tv_show):
-    # The HTML content for this section of the page
+
+def create_tv_season_tiles_table_content(tv_show):
+    """The HTML content for tv season table tiles of the page"""
     content = ''
     for season in tv_show.season:
         # Append the tile for the movie with its content filled in
@@ -247,6 +248,7 @@ def create_tv_show_tiles_table_content(tv_show):
 
 
 def open_movies_page(movies, tv_seasons):
+    """render content, make index.html and open it."""
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies),
         tv_show_tiles=create_tv_season_tiles_content(tv_seasons))
