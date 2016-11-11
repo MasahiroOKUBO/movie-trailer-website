@@ -1,21 +1,21 @@
 import webbrowser
 import video
 
-class Movie(video.Video):
-    """This class provides a way to store movie and tv related information"""
 
-    def __init__(self, title, duration, rating, storyline, poster_image, trailer_youtube):
-        print("Child Constructor Called")
+class Movie(video.Video):
+    """This class provides a way to store movie information"""
+
+    def __init__(self, title, duration, rating, storyline, main_image, trailer_youtube):
         video.Video.__init__(self, title, duration, rating)
         self.storyline = storyline
-        self.poster_image = poster_image
+        self.poster_image = main_image
         self.trailer_youtube = trailer_youtube
+
+    def show_poster_image(self):
+        webbrowser.open(self.main_image)
 
     def show_trailer_youtube(self):
         webbrowser.open(self.trailer_youtube)
-
-    def show_poster_image(self):
-        webbrowser.open(self.poster_image)
 
     def show_info(self):
         print("Title is - " + self.title)
