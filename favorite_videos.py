@@ -2,7 +2,6 @@ import webbrowser
 import os
 import re
 
-
 # Styles and scripting for the page
 main_page_head = '''
 <!DOCTYPE html>
@@ -184,6 +183,7 @@ tv_show_tile_table_content = '''
                 <td>{tv_show_season_description}</td>
             </tr>
 '''
+
 
 def create_movie_tiles_content(movies):
     """The HTML content for movie tiles of the page"""

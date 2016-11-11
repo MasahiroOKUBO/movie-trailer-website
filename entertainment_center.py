@@ -70,7 +70,6 @@ game_of_thrones = tv_season.TvSeason("GAME OF THRONES",
                                      ["episode1", "episode2", "episode3", "episode4"],
                                      "AMC")
 
-
 movies = [toy_story, avater, akira, gundam, jurassic_park, life_is_beautiful]
 tv_seasons = [walking_dead, blaking_bad, game_of_thrones]
 
