@@ -1,11 +1,11 @@
 import webbrowser
 import video
 
-class TvShow(video.Video):
-    """This class provides a way to store tv show related information"""
+
+class TvSeason(video.Video):
+    """This class provides a way to store tv season information"""
 
     def __init__(self, title, duration, rating, storyline, main_image, trailer_youtube, season, episode, tv_station):
-        print("Child Constructor Called")
         video.Video.__init__(self, title, duration, rating)
         self.storyline = storyline
         self.main_image = main_image
@@ -14,6 +14,12 @@ class TvShow(video.Video):
         self.episode = episode
         self.tv_station = tv_station
 
+    def show_poster_image(self):
+        webbrowser.open(self.main_image)
+
+    def show_trailer_youtube(self):
+        webbrowser.open(self.trailer_youtube)
+
     def get_local_listing(self):
         print(episode)
 
@@ -21,3 +27,5 @@ class TvShow(video.Video):
         print("Title is - " + self.title)
         print("Duration is - " + str(self.duration))
         print("Rating is - " + self.rating)
+        print("Storyline is - " + self.storyline)
+        print("TV station is - " + self.tv_station)
