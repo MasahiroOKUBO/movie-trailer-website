@@ -235,7 +235,7 @@ def create_tv_season_tiles_content(tv_shows):
 
 
 def create_tv_season_tiles_table_content(tv_show):
-    """The HTML content for tv season table tiles of the page"""
+    """The HTML content for tv season table tiles of the page. """
     content = ''
     for season in tv_show.season:
         # Append the tile for the movie with its content filled in
