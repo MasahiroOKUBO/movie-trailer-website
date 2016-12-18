@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6f469b7-4bfd-4669-b6df-29306b60e1aa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entertainment_center.py" afterPath="$PROJECT_DIR$/entertainment_center.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favorite_videos.py" afterPath="$PROJECT_DIR$/favorite_videos.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movie.py" afterPath="$PROJECT_DIR$/movie.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tv_season.py" afterPath="$PROJECT_DIR$/tv_season.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video.py" afterPath="$PROJECT_DIR$/video.py" />
-    </list>
+    <list default="true" id="d6f469b7-4bfd-4669-b6df-29306b60e1aa" name="Default" comment="" />
     <list id="bcfca85c-d9cd-4d5c-a41f-a8c22e8da67d" name="New changelist" comment="" />
     <list id="129d0fa5-329b-4936-8c53-5ed490bdd51d" name="New changelist２" comment="" />
     <ignored path="movie-trailer-website.iws" />
@@ -72,8 +65,8 @@
       <file leaf-file-name="entertainment_center.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/entertainment_center.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -727,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entertainment_center.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
