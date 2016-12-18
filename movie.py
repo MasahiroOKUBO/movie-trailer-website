@@ -3,7 +3,11 @@ import video
 
 
 class Movie(video.Video):
-    """This class provides a way to store movie information"""
+    """
+
+    This module provides a way to store Movie information.
+
+    """
 
     def __init__(self, title, duration, rating, storyline, main_image, trailer_youtube):
         video.Video.__init__(self, title, duration, rating)
