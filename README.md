@@ -4,8 +4,11 @@ Introduce my favorite movies and TVs.
 
 ## Run program
 
+```
 pyton entertainment_center.py
+```
+
 
 ## modify content
 
-edit entertainment_center.py
+Edit entertainment_center.py
