@@ -2,6 +2,17 @@ import movie
 import tv_season
 import favorite_videos
 
+"""
+
+This is a main program.
+
+
+python entertainment_center.py
+
+
+"""
+
+# param
 toy_story = movie.Movie("Toy Story",
                         120,
                         "G",

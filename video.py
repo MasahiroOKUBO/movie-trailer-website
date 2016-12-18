@@ -1,5 +1,10 @@
 class Video():
-    """This class Define video type contents."""
+    """
+
+    This class Define video type contents.
+    Parent Class of TvSeason and Movie.
+
+    """
     VALID_RATINGS = ["G", "PG", "PG-13", "R"]
 
     def __init__(self, title, duration, rating):

@@ -2,6 +2,13 @@ import webbrowser
 import os
 import re
 
+"""
+
+This class Define video type contents.
+Parent Class of TvSeason and Movie.
+
+"""
+
 # Styles and scripting for the page
 main_page_head = '''
 <!DOCTYPE html>

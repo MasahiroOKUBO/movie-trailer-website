@@ -3,7 +3,11 @@ import video
 
 
 class TvSeason(video.Video):
-    """This class provides a way to store tv season information"""
+    """
+
+    This class provides a way to store tv season information
+
+    """
 
     def __init__(self, title, duration, rating, storyline, main_image, trailer_youtube, season, episode, tv_station):
         video.Video.__init__(self, title, duration, rating)
