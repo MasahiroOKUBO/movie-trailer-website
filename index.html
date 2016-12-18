@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Favorite Videos !</title>
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+        .video-type {
+            font-size: 200%;
+            margin: 10px;
+            border-top: 20px solid orange;
+            border-right: 20px solid orange;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            background-color: #ffc000;
+            display: flex;
+            color: red;
+        }
+        .tv-show-info{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tv-show-info th{
+            width: 25%;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+            color: #333;
+            background-color: #eee;
+            border: 1px solid #b9b9b9;
+        }
+        .tv-show-info td{
+            padding: 6px;
+            background-color: #fff;
+            border: 1px solid #b9b9b9;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Fresh Tomatoes Video Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+    <div class="video-type">My Favorite Movies !</div>
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Bj4gS1JQzjk" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" width="220" height="342">
+    <h2>Toy Story</h2>
+    <p>A story of a boy and his toys to life</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="qYe-ncx3rVE" data-toggle="modal" data-target="#trailer">
+    <img src="http://microsites2.foxinternational.com/jp/avatar/avatar_onesheet.jpg" width="220" height="342">
+    <h2>Avater</h2>
+    <p>A Marine on an alian planet</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="LALsuMWv2ps" data-toggle="modal" data-target="#trailer">
+    <img src="http://blog-imgs-19.fc2.com/c/i/n/cinemaxj/AKIRA.jpg" width="220" height="342">
+    <h2>AKIRA</h2>
+    <p>Psychicer in Tokyo 2020</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wpQUmdw5U8Y" data-toggle="modal" data-target="#trailer">
+    <img src="http://blogs.c.yimg.jp/res/blog-55-71/universalcentuly/folder/1698020/20/62936720/img_0" width="220" height="342">
+    <h2>GUNDAM</h2>
+    <p>War in the space with battle vehicles called GUNDAM</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="lc0UehYemQA" data-toggle="modal" data-target="#trailer">
+    <img src="http://ecx.images-amazon.com/images/I/71sXDxo9k7L._SL1106_.jpg" width="220" height="342">
+    <h2>JURASSIC PARK</h2>
+    <p>Clone dinosaur assault people</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="w5RyZ9qAEKs" data-toggle="modal" data-target="#trailer">
+    <img src="http://thumbnail.image.rakuten.co.jp/@0_mall/elcommun/cabinet/poster_cinema/img55479640.jpg?_ex=350x350&s=2&r=1" width="220" height="342">
+    <h2>Life is Beautiful</h2>
+    <p>a father with great humanity in WW2</p>
+</div>
+
+    <div class="video-type">My Favorite TV Seasons !</div>
+      
+<div class="col-md-12 col-lg-12 movie-tile text-center" data-trailer-youtube-id="R1v0uFms68U" data-toggle="modal" data-target="#trailer">
+    <img src="http://cdn.bgr.com/2015/01/the-walking-dead-season-5-trailer.png"  height="342">
+    <h2>WALKING DEAD</h2>
+    <p>Escape from walking dead!!</p>
+    <table class="tv-show-info">
+        <tbody>
+            <tr>
+                <th>season</th>
+                <th>number of episode</th>
+                <th>season description</th>
+            </tr>
+            
+            <tr>
+                <td>season1</td>
+                <td>11</td>
+                <td>danger</td>
+            </tr>
+
+            <tr>
+                <td>season2</td>
+                <td>12</td>
+                <td>more danger</td>
+            </tr>
+
+            <tr>
+                <td>season3</td>
+                <td>10</td>
+                <td>danger*3</td>
+            </tr>
+
+            <tr>
+                <td>season4</td>
+                <td>8</td>
+                <td>danger*4</td>
+            </tr>
+
+            <tr>
+                <td>season5</td>
+                <td>9</td>
+                <td>danger*5</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-12 col-lg-12 movie-tile text-center" data-trailer-youtube-id="HhesaQXLuRY" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.themindtrap.com/img/rooms/breaking-bad-1.jpg"  height="342">
+    <h2>BLAKING BAD</h2>
+    <p>A Sience Teacher fall in drug dealer</p>
+    <table class="tv-show-info">
+        <tbody>
+            <tr>
+                <th>season</th>
+                <th>number of episode</th>
+                <th>season description</th>
+            </tr>
+            
+            <tr>
+                <td>season1</td>
+                <td>11</td>
+                <td>bad</td>
+            </tr>
+
+            <tr>
+                <td>season2</td>
+                <td>12</td>
+                <td>worse</td>
+            </tr>
+
+            <tr>
+                <td>season3</td>
+                <td>10</td>
+                <td>worst</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-12 col-lg-12 movie-tile text-center" data-trailer-youtube-id="522l0YE9hRQ" data-toggle="modal" data-target="#trailer">
+    <img src="http://images.ciatr.jp/2015/03/07014420/game-of-thrones.jpg"  height="342">
+    <h2>GAME OF THRONES</h2>
+    <p>War with Kings and Blood relatives.</p>
+    <table class="tv-show-info">
+        <tbody>
+            <tr>
+                <th>season</th>
+                <th>number of episode</th>
+                <th>season description</th>
+            </tr>
+            
+            <tr>
+                <td>season1</td>
+                <td>10</td>
+                <td>war</td>
+            </tr>
+
+            <tr>
+                <td>season2</td>
+                <td>10</td>
+                <td>more war</td>
+            </tr>
+
+            <tr>
+                <td>season3</td>
+                <td>10</td>
+                <td>more more war</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+    </div>
+  </body>
+</html>
