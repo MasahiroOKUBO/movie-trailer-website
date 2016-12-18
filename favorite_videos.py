@@ -4,8 +4,7 @@ import re
 
 """
 
-This class Define video type contents.
-Parent Class of TvSeason and Movie.
+This Program output and open HTML file .
 
 """
 
@@ -193,7 +192,11 @@ tv_show_tile_table_content = '''
 
 
 def create_movie_tiles_content(movies):
-    """The HTML content for movie tiles of the page"""
+    """
+
+    Create HTML content for movie tiles of the page
+
+    """
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -215,7 +218,11 @@ def create_movie_tiles_content(movies):
 
 
 def create_tv_season_tiles_content(tv_shows):
-    """The HTML content for tv season tiles of the page"""
+    """
+
+    Create HTML content for tv_season tiles of the page
+
+    """
     content = ''
     for tv_show in tv_shows:
         # Extract the youtube ID from the url
@@ -242,7 +249,12 @@ def create_tv_season_tiles_content(tv_shows):
 
 
 def create_tv_season_tiles_table_content(tv_show):
-    """The HTML content for tv season table tiles of the page. """
+    """
+
+    Create HTML content for tv_season_table tiles of the page
+
+    """
+
     content = ''
     for season in tv_show.season:
         # Append the tile for the movie with its content filled in
@@ -255,7 +267,11 @@ def create_tv_season_tiles_table_content(tv_show):
 
 
 def open_movies_page(movies, tv_seasons):
-    """render content, make index.html and open it."""
+    """
+
+    render content, make index.html and open it.
+
+    """
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies),
         tv_show_tiles=create_tv_season_tiles_content(tv_seasons))

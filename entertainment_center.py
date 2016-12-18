@@ -6,13 +6,12 @@ import favorite_videos
 
 This is a main program.
 
-
-python entertainment_center.py
-
+1. make instances of Video Type contents.
+2. make list of instances.
+3. call favorite_videos.open_movies_page().
 
 """
 
-# param
 toy_story = movie.Movie("Toy Story",
                         120,
                         "G",
