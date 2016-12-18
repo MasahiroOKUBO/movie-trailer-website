@@ -8,4 +8,4 @@ pyton entertainment_center.py
 
 ## modify content
 
-edit. entertainment_center.py
+edit entertainment_center.py
